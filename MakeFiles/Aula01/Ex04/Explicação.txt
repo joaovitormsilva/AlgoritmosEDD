@@ -1,0 +1,10 @@
+Os arquivos .h estão dentro da pasta include
+dessa forma, o comando:
+
+gcc -c Float_vector.c -o obj/float_vector.o
+
+Não funcionaria, pois o Float_vector.h Não
+está no mesmo "nível" que o demais então é preciso
+adicionar um "local de busca" para o gcc, ficando com:
+
+gcc -c Float_vector.c -I include/ -o obj/float_vector.o

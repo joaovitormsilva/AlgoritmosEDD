@@ -1,0 +1,9 @@
+Os arquivos .h estão dentro da pasta include
+Os arquivos .c estão dentro da pasta src
+E os arquivos .o estão na pasta obj
+
+então na hora de compilar o comando será:
+
+gcc -c .\src\Float_Vector.c -I .\include\ -o .\obj\Float_Vector.o
+
+        'O .c está na pasta SRC'  'considere a pasta include para os .h' e coloque os .o na pasta obj

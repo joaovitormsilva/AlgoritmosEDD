@@ -8,3 +8,4 @@ está no mesmo "nível" que o demais então é preciso
 adicionar um "local de busca" para o gcc, ficando com:
 
 gcc -c Float_vector.c -I include/ -o obj/float_vector.o
+

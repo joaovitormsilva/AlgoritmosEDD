@@ -21,9 +21,26 @@ sNo *criar_no(int val)
     return no;
 }
 
-listaLigada *listaLigada_create()
+listaLigada *listaligada_create()
 {
     listaLigada *L = (listaLigada *)calloc(1, sizeof(listaLigada));
     L->comeco = NULL;
     return L;
+}
+
+void listaligada_addfirst(listaLigada *L,int val){
+    sNo *p = criar_no(val);
+    p->proximo=L->comeco;
+    L->comeco = p;        
+}
+void listaligada_imprimir(const listaLigada *L){
+    sNo *no=L->comeco;
+    printf("L -> ");
+    while(no != NULL){
+        printf("%d -> ", no->valor);
+        no=no->proximo;
+    }
+    printf("NULL");
+   
+
 }

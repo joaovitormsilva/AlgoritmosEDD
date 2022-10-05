@@ -8,6 +8,7 @@ Para ajudar na navegação desse repositório:
   além de exemplos de código da playlist de estruturas de dados.
   
   Makefile:  -- Comece a ver por aqui
+  
     Parte em que foi desenvolvido um makefile com "face" profissional e foi gerado um modelo chamado "libed", então essa pasta que
     será usada no decorrer do conteúdo.
    

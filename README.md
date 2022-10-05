@@ -4,6 +4,7 @@ Repositório para a matéria de Algoritmos e Estruturas de Dados
 Git do professor: https://github.com/diegofurts/alg1_bsi_2022
 
 Para ajudar na navegação desse repositório:
+
   A parte de Estruturas, tem todas as estruturas de dados vistas em aula (não peguei o código do professor, mas anyway) \
   além de exemplos de código da playlist de estruturas de dados.
   

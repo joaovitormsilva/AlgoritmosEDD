@@ -18,7 +18,10 @@ int main(){
     listaligada_addlast(L,11);
     listaligada_imprimir(L);
     printf("\n");
-    listaligada_remove(L,15);
+    listaligada_remove(L,99);
+    listaligada_removeall(L,99);
+    
+
     listaligada_imprimir(L);
 
     return 0;

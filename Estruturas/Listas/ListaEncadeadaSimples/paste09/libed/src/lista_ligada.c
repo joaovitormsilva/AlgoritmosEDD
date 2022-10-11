@@ -61,17 +61,28 @@ void listaligada_addlast(listaLigada *L,int val){
 
 void listaligada_remove(listaLigada *L,int val){
     if(!listaligada_vazia(L)){
-        if(L->comeco->valor == val){
-            sNo *aux=L->comeco;
-
-            if(L->end == L->comeco){
-                L->end = NULL;
+        sNo *atual = L->comeco->proximo;
+        sNo *anterior=L->comeco;
+        
+        while(atual != NULL && atual->valor!=val){
+            anterior=atual;
+            atual=atual->proximo;
+        }
+        if(atual!=NULL){
+            if(L->end!=NULL){
+                L->end=anterior;
             }
-            L->comeco = L->comeco->proximo;
-            free(aux);
+            if(L->comeco=NULL){
+                L->comeco=atual->proximo;
+            }
+            else{
+                anterior->proximo=atual->proximo;
+            }
+            free(atual);
         }
     }
 }
+
 
 void listaligada_imprimir(const listaLigada *L){
     sNo *no=L->comeco;

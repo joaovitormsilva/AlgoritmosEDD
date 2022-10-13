@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdbool.h": "c",
-        "lista_ligada.h": "c"
+        "lista_ligada.h": "c",
+        "pilhamodularizado.h": "c"
     }
 }

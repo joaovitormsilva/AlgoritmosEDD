@@ -1,0 +1,17 @@
+Lista Estática:
+
+Vantagens:
+	Acesso direto rápido
+	Dados contíguos na memória
+	Percorrer os elementos é rápido
+Desvatanges:
+	Tamanho do vetor
+
+Lista Dinâmica:
+Vantagens:
+	Tamanho é flexível
+
+Desvantagens:
+	Acesso de um elemento é sequencial
+	Dados não contíguos na memória
+	Percorrer a lista inteira é lento

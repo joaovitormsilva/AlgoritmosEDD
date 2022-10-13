@@ -12,12 +12,11 @@ all: libed myapps
 
 libed: \
 	$(obj)/Float_Vector.o\
-	$(obj)/pilha_modularizado.o \
-	$(obj)/lista_ligada.o 
+	$(obj)/lista_ligada.o
 	ar -rcs $(lib)/libed.a $(obj)/*.o
 
 #tem que ter o 'lib' e o .a 
-myapps: $(bin)/test_float_vector $(bin)/teste_listaLigada $(bin)/test_pilha
+myapps: $(bin)/test_float_vector $(bin)/teste_listaLigada
 
 
 $(obj)/%.o: $(src)/%.c $(include)/%.h

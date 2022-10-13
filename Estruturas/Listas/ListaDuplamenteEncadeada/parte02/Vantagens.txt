@@ -1,0 +1,7 @@
+Vantagens:
+Melhor utilização dos recursos de memória
+Não precisa movimentar os elementos nas operações de inserção e remoção
+
+Desvantagens:
+	Acesso indireto aos elementos
+	Necessidade de percorrer a lista para acessar um elemento

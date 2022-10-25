@@ -4,10 +4,10 @@
 #include <stdlib.h>
 
 struct elemento{
-    char operador;
+    int valores;
     struct elemento *proximo;
 };
-typedef struct elemento elem;
+typedef struct elemento Elem;
 
 pilha *pilhadin_cria_Pilha(){
     pilha *pi = (pilha *) malloc(sizeof(pilha));
@@ -18,7 +18,7 @@ pilha *pilhadin_cria_Pilha(){
 
 void pilhadin_liberapilha(pilha* pi){
     if(pi !=NULL){
-        elem* no;
+        Elem* no;
         while((*pi) != NULL){
             no = *pi;
             *pi = (*pi)->proximo;
@@ -33,7 +33,7 @@ int pilhadin_tamanho_pilha(pilha *pi){
         return 0;
     }
     int size=0;
-    elem *aux=(*pi);
+    Elem *aux=(*pi);
     while(aux != NULL){
         size++;
         aux = aux->proximo;
@@ -41,26 +41,25 @@ int pilhadin_tamanho_pilha(pilha *pi){
     return size;
 }
 
-void pilhadin_inserir(pilha *pi, char valor){
-    if(pi == NULL){
-        exit(0);
-    }
-    elem* no = (elem *) malloc(sizeof(elem));
+int pilhadin_inserir(pilha *pi, int valor){
+    if(pi == NULL)
+        return 0;
+    Elem* no = (Elem *) malloc(sizeof(Elem));
     if(no == NULL)
-        exit(0);
-    elem *aux = *pi;
+        return 0;
+    Elem *aux = *pi;
     if((*pi) == NULL){
-        no->operador=valor;
+        no->valores=valor;
         no->proximo=(*pi);
         *pi = no;
     }
     else{
-        if(valor != aux->operador){
+        if(valor != aux->valores){
         (*pi)=(*pi)->proximo;
         free(aux);
         }
         else{
-        no->operador=valor;
+        no->valores=valor;
         no->proximo=(*pi);
         *pi = no;
         }
@@ -68,28 +67,23 @@ void pilhadin_inserir(pilha *pi, char valor){
        
 }
 
-void pilhadin_remover(pilha *pi){
+int pilhadin_remover(pilha *pi){
     if(pi == NULL)
-        exit(0);
-    
-    elem *aux = (*pi);
-    while(aux != NULL){
-        *pi = aux->proximo;
-        free(aux);
-        aux=(*pi);
-    }
+        return 0;
+    if((*pi) == NULL)
+        return 0;
+    Elem *no = *pi;
+    *pi = no->proximo;
+    free(no);
+    return 1;
 
 }
 
 void pilhadin_imprimir(pilha *pi){
-
-    if(pi == NULL)
-        exit(0);
-
-    elem *aux = *pi;
-    printf("L ->");
+    Elem *aux = *pi;
+    printf("P ->");
     while(aux != NULL){
-        printf(" %c ->",aux->operador);
+        printf(" %d ->",aux->valores);
         aux= aux->proximo;
     }
     printf(" NULL\n");
@@ -99,6 +93,6 @@ char pilhadin_consulta(pilha *pi){
     if(pi == NULL){
         return 0;
     }
-    return ((*pi)->operador);
+    return ((*pi)->valores);
 }
 

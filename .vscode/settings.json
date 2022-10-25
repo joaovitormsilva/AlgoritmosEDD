@@ -3,6 +3,8 @@
         "stdbool.h": "c",
         "lista_ligada.h": "c",
         "pilhamodularizado.h": "c",
-        "stddef.h": "c"
+        "stddef.h": "c",
+        "stdio.h": "c",
+        "pilha_modularizado.h": "c"
     }
 }

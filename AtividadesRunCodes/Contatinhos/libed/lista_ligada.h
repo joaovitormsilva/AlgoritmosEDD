@@ -20,6 +20,8 @@ bool listaligada_vazia(const listaLigada *L);
 
 int listaligada_primeiro_valor(const listaLigada *L);
 int listaligada_ultimo_valor(const listaLigada *L);
-int listaligada_pegar_valor(const listaLigada *L,char index[100]);
-char listaligada_confere_valor(const listaLigada *L,char index[100]);
+void listaligada_pegar_valor(const listaLigada *L,char index[100]);
+int listaligada_confere_valor(const listaLigada *L,char index[100]);
+void listaligada_alterar(listaLigada *L,char nome[100],int numero);
+
 #endif // LISTA_LIGADA_H

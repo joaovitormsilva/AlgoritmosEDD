@@ -12,31 +12,37 @@ int main(){
     char operacao;
     int vezes =0;
     do{
-        scanf("%c",&operacao);
+        
+        scanf("%c",&operacao); //ler o tipo de operacao
         if(operacao == '0')
             break;
         switch(operacao){
-            case 'I':
+            case 'I': //se for inserir
                 scanf("%s %ld",nome,&numero);
-
                 fflush(stdin);
-                char nome2[]=listaligada_confere_valor(L,nome);
-                if(!strcmp(nome2,nome)){
-                    listaligada_addfirst(L,nome,numero);
-
-                }
-           
-                listaligada_imprimir(L);
+                listaligada_addfirst(L,nome,numero);
+    
                 vezes++;
                 break;
-            case 'A':
+
+            case 'A': //se for alterar
+                scanf("%s %ld",nome,&numero);
+                fflush(stdin);
+                listaligada_alterar(L,nome,numero);
+                
                 break;
-            case 'P':
+
+            case 'P': //se for procurar
                 scanf(" %s",nome);
+                fflush(stdin);
                 listaligada_pegar_valor(L,nome);
                 break;
-            case 'R':
+            case 'R': //se for remover 
+                scanf(" %s",nome);
+                fflush(stdin);
+           
                 listaligada_remove(L,nome);
+
                 break; 
         }
         fflush(stdin);

@@ -9,7 +9,10 @@ flags = -O3 -Wall
 libs= -lm -led -L $(lib)
 
 all: 
-	gcc -c lista_ligada.c -o lista_ligada.o
-	gcc teste_listaLigada.c lista_ligada.o -o main
+	gcc -c PilhaDin.c -o PilhaDin.o
+	gcc -c fila.c -o fila.o
+
+	gcc pilafila.c PilhaDin.o fila.o -o main
+
 run:
 	./main
